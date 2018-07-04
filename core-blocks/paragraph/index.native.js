@@ -7,7 +7,7 @@ import { __ } from '@wordpress/i18n';
 import { PlainText } from '@wordpress/editor';
 import { createBlock, getPhrasingContentSchema } from '@wordpress/blocks';
 
-import RCTAztecView from 'react-native-aztec2';
+import RCTAztecView from 'react-native-aztec';
 
 export const name = 'core/paragraph';
 
