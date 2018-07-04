@@ -118,7 +118,6 @@ export const settings = {
 				] }
 				text={ { text: attributes.content, eventCount: attributes.eventCount } }
 				onContentSizeChange={ ( event ) => {
-					console.log(event.nativeEvent);
 					setAttributes( {
 						...attributes, 
 						aztecHeight: event.nativeEvent.contentSize.height
@@ -126,7 +125,6 @@ export const settings = {
 					);
 				} }
 				onChange={ ( event ) => {
-					console.log(event.nativeEvent);
 					setAttributes( {
 						...attributes,
 						content: event.nativeEvent.text,
