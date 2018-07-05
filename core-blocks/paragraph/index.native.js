@@ -5,7 +5,7 @@ import { View } from 'react-native';
  */
 import { __ } from '@wordpress/i18n';
 import { PlainText } from '@wordpress/editor';
-import { createBlock, getPhrasingContentSchema } from '@wordpress/blocks';
+import { getPhrasingContentSchema } from '@wordpress/blocks';
 
 import RCTAztecView from 'react-native-aztec';
 
@@ -60,6 +60,7 @@ const supports = {
 
 const _minHeight = 50;
 
+
 export const settings = {
 
 	title: __( 'Paragraph' ),
@@ -74,7 +75,7 @@ export const settings = {
 
 	attributes: schema,
 
-	transforms: {
+/*	transforms: {
 	from: [
 			{
 				type: 'raw',
@@ -99,6 +100,22 @@ export const settings = {
 							br: {},
 							'#text': {},
 						}
+					},
+				},
+			},
+		],
+	},
+*/
+	transforms: {
+		from: [
+			{
+				type: 'raw',
+				// Paragraph is a fallback and should be matched last.
+				priority: 20,
+				selector: 'p',
+				schema: {
+					p: {
+						children: getPhrasingContentSchema(),
 					},
 				},
 			},
