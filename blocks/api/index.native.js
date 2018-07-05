@@ -12,7 +12,8 @@ export {
 	registerBlockType,
 	getBlockType,
 } from './registration';
-export { 
+/*export { 
 	getPhrasingContentSchema 
 } 
 from './raw-handling/utils';
+*/

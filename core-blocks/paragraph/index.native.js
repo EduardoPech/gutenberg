@@ -46,12 +46,6 @@ const schema = {
 	customFontSize: {
 		type: 'number',
 	},
-	eventCount : {
-		type: 'number',
-	},
-	aztecHeight : {
-		type: 'number',
-	}
 };
 
 const supports = {
@@ -75,7 +69,7 @@ export const settings = {
 
 	attributes: schema,
 
-/*	transforms: {
+	transforms: {
 	from: [
 			{
 				type: 'raw',
@@ -105,7 +99,7 @@ export const settings = {
 			},
 		],
 	},
-*/
+/*
 	transforms: {
 		from: [
 			{
@@ -120,7 +114,7 @@ export const settings = {
 				},
 			},
 		],
-	},
+	},*/
 
 	edit( { attributes, setAttributes, style } ) {
 		if (attributes.aztecHeight == null) {
